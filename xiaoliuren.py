@@ -91,7 +91,6 @@ class SampleComboBox(wx.Frame):
         self.stcInfo = wx.StaticText(panel, label="", pos=(150, bgv))
         self.Centre()
 
-
     def OnSelectyue(self, e):
         global input_text, input_num, distros1, dist, output_text
         input_text[0] = e.GetString()
@@ -102,8 +101,10 @@ class SampleComboBox(wx.Frame):
         output_text[0] = dist[input_num[0]]
         # print(output_text)
         # self.stcInfo.SetLabel("农历月日时: " + input_text)
-        self.stcInfo.SetLabel("输入的农历月日时: " + input_text[0]+" " + input_text[1]+" " + input_text[2]
-                              + "\n" + "\n" + "输出的结果： "+ output_text[0]+"  " + output_text[1]+"  " + output_text[2])
+        self.stcInfo.SetLabel(
+            "使用说明：选取当前农历月、日、时辰" + "\n" + "然后就可以得到所想念头对应事物的吉凶" + "\n" + "\n"
+            + "输入的农历月日时: " + input_text[0] + " " + input_text[1] + " " + input_text[2]
+            + "\n" + "\n" + "输出的结果： " + output_text[0] + "  " + output_text[1] + "  " + output_text[2])
 
     def OnSelectri(self, e):
         global input_text, input_num, distros2, dist, output_text
@@ -113,8 +114,10 @@ class SampleComboBox(wx.Frame):
         # print(dist[input_num[1]])
         output_text[1] = dist[input_num[1]]
         # self.stcInfo.SetLabel("农历月日时: " + input_text)
-        self.stcInfo.SetLabel("输入的农历月日时: " + input_text[0] + " " + input_text[1] + " " + input_text[2]
-                              + "\n" + "\n" + "输出的结果： " + output_text[0] + "  " + output_text[1] + "  " + output_text[2])
+        self.stcInfo.SetLabel(
+            "使用说明：选取当前农历月、日、时辰" + "\n" + "然后就可以得到所想念头对应事物的吉凶" + "\n" + "\n"
+            + "输入的农历月日时: " + input_text[0] + " " + input_text[1] + " " + input_text[2]
+            + "\n" + "\n" + "输出的结果： " + output_text[0] + "  " + output_text[1] + "  " + output_text[2])
 
     def OnSelectshi(self, e):
         global input_text, input_num, distros3, dist, output_text
@@ -124,8 +127,10 @@ class SampleComboBox(wx.Frame):
         # print(shi)
         # print(dist[input_num[2]])
         output_text[2] = dist[input_num[2]]
-        self.stcInfo.SetLabel("输入的农历月日时: " + input_text[0] + " " + input_text[1] + " " + input_text[2]
-                              + "\n" + "\n" + "输出的结果： " + output_text[0] + "  " + output_text[1] + "  " + output_text[2])
+        self.stcInfo.SetLabel(
+            "使用说明：选取当前农历月、日、时辰" + "\n" + "然后就可以得到所想念头对应事物的吉凶" + "\n" + "\n"
+            + "输入的农历月日时: " + input_text[0] + " " + input_text[1] + " " + input_text[2]
+            + "\n" + "\n" + "输出的结果： " + output_text[0] + "  " + output_text[1] + "  " + output_text[2])
 
 
 def main():

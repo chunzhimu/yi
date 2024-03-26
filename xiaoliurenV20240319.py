@@ -9,6 +9,7 @@ import wx
 # import numpy as npy
 import datetime
 from lunardate import LunarDate
+import cn2an
 # This is a sample Python script.
 # import time
 # from typing import Union
@@ -83,9 +84,10 @@ class SampleComboBox(wx.Frame):
         # current_Second = str(today.second)
 
         tt2 = LunarDate.fromSolarDate(today.year,today.month,today.day)
-        # print(tt2.year)
-        # print(tt2.month)
-        # print(tt2.day)
+        # print(tt2)
+        print(tt2.year)
+        print(tt2.month)
+        print(tt2.day)
         # print('====================')
 
         # a1=today.hour // 10
@@ -140,7 +142,9 @@ class SampleComboBox(wx.Frame):
 
 
         today=str(today)
-        today_lunar=str(tt2.year)+"年"+" "+distros1[tt2.month]+" "+distros2[tt2.day]+" "+distros3[shichen]
+        # today_lunar=str(tt2.year)+"年"+" "+distros1[tt2.month]+" "+distros2[tt2.day]+" "+distros3[shichen]
+        today_lunar = str(tt2.year) +"年 " + " " + cn2an.an2cn(tt2.month) + "月 " + cn2an.an2cn(tt2.day) + "日 " + distros3[shichen]
+        print(today_lunar)
         # /a=
         wx.StaticText(panel, label="使用说明：选取当前农历月、日、时辰" + "\n" + "即可得到所想念头对应事物的状态", pos=(bgh*7, bgv-10))
 
